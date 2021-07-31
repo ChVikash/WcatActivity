@@ -1,17 +1,12 @@
-function ncomfunc(paths){
-    
-}
-
-
 function ncomfn(content){
     let v = 1 ;
     if(content.length > 0){
         process.stdout.write(v.toString());
     }
-    for(let i = 0 ; i < content.length ; ++i){
+    for(let i = 0 ; i < content.length - 1 ; ++i){
         let x = content.charAt(i);
         process.stdout.write(x);
-        if(x == '\n'){
+        if(x == '\n' ){
             v++ ;
             process.stdout.write(v.toString());
         }

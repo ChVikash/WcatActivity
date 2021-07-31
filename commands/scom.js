@@ -1,9 +1,5 @@
-let fs = require("fs");
-function scomfn(paths){
-    content = "";
-    for(let i = 0  ; i < paths.length ; ++i){
-        content = content + fs.readFileSync(paths[i]) + "\n"; 
-    }
+
+function scomfn(content){
     contentArr = content.split("\n");
     //console.log(contentArr);
     for(let i = 1 ; i < contentArr.length ; ++i){
