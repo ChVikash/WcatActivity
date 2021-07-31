@@ -2,6 +2,7 @@ let fs = require("fs");
 let path = require("path");
 let readCon = require("./readCon");
 let scom = require("./commands/scom");
+const ncom = require("./commands/ncom");
 let inputArr = process.argv.slice(2);
 
 let content = "";
@@ -22,10 +23,15 @@ for(let i = 0 ; i < inputArr.length ; ++i){
     }
 }
 content = readCon.fn(paths);
+
 if(conditions.length == 0){
+    
     console.log(content);
 }else{
     if(conditions[0] == 's'){
         scom.scomfn(content);
+    }
+    if(conditions[0] == 'n'){
+        ncom.ncomfn(content);
     }
 }
