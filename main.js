@@ -3,11 +3,11 @@ let path = require("path");
 let readCon = require("./readCon");
 let scom = require("./commands/scom");
 const ncom = require("./commands/ncom");
+
+
 let inputArr = process.argv.slice(2);
 
-let content = "";
-
-let paths = []
+let paths = [];
 
 let conditions = []; 
 for(let i = 0 ; i < inputArr.length ; ++i){
@@ -22,16 +22,17 @@ for(let i = 0 ; i < inputArr.length ; ++i){
         }
     }
 }
-content = readCon.fn(paths);
 
+let ans = "";
 if(conditions.length == 0){
-    
+    let content = readCon.fn(paths);
     console.log(content);
 }else{
     if(conditions[0] == 's'){
-        scom.scomfn(content);
+        ans = scom.scomfn(paths);
     }
     if(conditions[0] == 'n'){
         ncom.ncomfn(content);
     }
+
 }

@@ -1,3 +1,8 @@
+function ncomfunc(paths){
+    
+}
+
+
 function ncomfn(content){
     let v = 1 ;
     if(content.length > 0){
